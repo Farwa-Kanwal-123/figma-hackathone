@@ -14,7 +14,7 @@ const greatVibes = Great_Vibes({
 
 const Testimonials = () => {
   return (
-    <div className="bg-[#0D0D0D] px-4 sm:px-8 lg:px-16 py-12">
+    <div className="bg-[#0D0D0D] px-4 sm:px-8 lg:px-16 pb-12">
       {/* Title Section */}
       <div className="text-left mb-12 ml-4 sm:ml-8 lg:ml-12">
         <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-orange-500`}>Testimonials</p>

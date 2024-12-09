@@ -22,9 +22,9 @@ const FoodCategory = () => {
     <section className="bg-black text-white py-16 px-6">
       <div className="container mx-auto text-center">
         {/* Title */}
-        <h3 className={`${greatVibes.className} text-orange-500 text-2xl md:text-4xl font-bold mb-12`}> Food Category</h3>
+        <h3 className={`${greatVibes.className} text-[#FF9F0D] text-2xl md:text-4xl font-bold mb-12`}> Food Category</h3>
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          <span className="text-orange-500">Choose</span> Food Item
+          <span className="text-[#FF9F0D]">Choose</span> Food Item
         </h2>
 
         {/* Grid of food items */}
@@ -42,7 +42,7 @@ const FoodCategory = () => {
 
               {/* Overlay label */}
               <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 px-4 py-2 rounded-md">
-                <span className="text-orange-500 font-semibold">{item.label}</span>
+                <span className="text-[#FF9F0D] font-semibold">{item.label}</span>
               </div>
             </div>
           ))}

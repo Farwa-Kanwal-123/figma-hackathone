@@ -13,14 +13,14 @@ const FromOurMenu = () => {
   return (
     <div className="bg-[#0D0D0D] mx-auto px-4 sm:px-8 lg:px-16 py-12">
       <div className="text-center mb-12">
-        <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-orange-500`}>Choose & Pick</p>
+        <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-[#FF9F0D]`}>Choose & Pick</p>
         <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
-          <span className="text-orange-500">Fr</span>om Our Menu
+          <span className="text-[#FF9F0D]">Fr</span>om Our Menu
         </h2>
       </div>
       <div className="flex justify-center mb-12">
         <ul className="flex flex-wrap justify-wrap gap-[6rem] text-white text-sm sm:text-base">
-          <li className="text-orange-500 font-bold">Breakfast</li>
+          <li className="text-[#FF9F0D] font-bold">Breakfast</li>
           <li>Lunch</li>
           <li>Dinner</li>
           <li>Dessert</li>
@@ -61,7 +61,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Lettuce Leaf</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">12.5$</p>
+                <p className="text-[#FF9F0D]">12.5$</p>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Fresh Breakfast</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">12.5$</p>
+                <p className="text-[#FF9F0D]">12.5$</p>
               </div>
             </div>
 
@@ -95,7 +95,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Mild Butter</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">12.5$</p>
+                <p className="text-[#FF9F0D]">12.5$</p>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Glow Cheese</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">12.5$</p>
+                <p className="text-[#FF9F0D]">12.5$</p>
               </div>
             </div>
 
@@ -165,7 +165,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Mushaom Pizza</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">14.5$</p>
+                <p className="text-[#FF9F0D]">14.5$</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -180,7 +180,7 @@ const FromOurMenu = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white">Mild Butter</h3>
                 <p className="text-sm text-gray-300">Lacus nisi, et ac dapibus velit in consequat.</p>
-                <p className="text-orange-500">12.5$</p>
+                <p className="text-[#FF9F0D]">12.5$</p>
               </div>
             </div>
           </div>
