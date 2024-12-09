@@ -13,12 +13,12 @@ function HomePage () {
     <>
     <section className=' bg-black px-3 md:px-[135px] flex flex-col justify-evenly md:flex-row  md:items-center py-[50px]'>
         {/* Heading */}
-        <div className='text-white w-full md:w-[50%]'>
-  <h1 className={`${greatVibes.className} md:text-[32px] text-[24px] font-normal text-[#FF9F0D] font whitespace-nowrap`}>
+        <div className='text-white w-full md:w-[50%] lg:w-[472px]  lg:lg:h-[356px]'>
+  <h2 className={`${greatVibes.className} md:text-[32px] text-[24px] font-normal text-[#FF9F0D] font whitespace-nowrap`}>
     Its Quick & Amusing!
-  </h1>
+  </h2>
 
-  <h1 className='text-[25px] md:text-[50px] font-bold whitespace-nowrap md:whitespace-normal'>
+  <h1 className='text-[25px] md:text-[50px]  font-bold whitespace-nowrap md:whitespace-normal'>
 
     <span className='text-[#FF9F0D]'>Th</span>e Art of speed food Quality
   </h1>

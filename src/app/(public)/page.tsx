@@ -1,6 +1,6 @@
 
 
-import Header from '@/components/Header';
+import Header from '@/components/home-components/HomeHeader';
 import HomeHero from '@/components/home-components/HomeHero';
 import HomeAbout from '@/components/home-components/HomeAbout';
 import FoodCategory from '@/components/home-components/FoodCategory';
