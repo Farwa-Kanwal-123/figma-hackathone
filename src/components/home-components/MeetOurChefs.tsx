@@ -21,7 +21,7 @@ const MeetOurChef = () => {
     <div className="w-full grid grid-cols-2 sm:grid-cols-3 px-28 gap-6 lg:grid-cols-4 lg:gap-2 items-center justify-center">
       <div className="flex items-center justify-center">
         <Image
-          src="/Chef1.png"
+          src="/chef1.png"
           alt="Partner 1"
           width={306}
           height={329}

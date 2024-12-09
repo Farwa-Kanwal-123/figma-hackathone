@@ -15,7 +15,7 @@ export default function Experience() {
           {ExperienceItem.map((item, index) => (
             <div 
               key={index} 
-              className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 mb-8 sm:mb-10 lg:mb-12 flex flex-col justify-center items-center"
+              className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-10 lg:mb-12 flex flex-col justify-center items-center"
             >
               <div>
                 <Image
