@@ -18,12 +18,12 @@ function HomePage () {
     Its Quick & Amusing!
   </h2>
 
-  <h1 className='text-[25px] md:text-[50px]  font-bold whitespace-nowrap md:whitespace-normal'>
+  <h1 className='text-[25px] md:text-[50px]  font-bold text-wrap md:whitespace-normal'>
 
     <span className='text-[#FF9F0D]'>Th</span>e Art of speed food Quality
   </h1>
 
-  <p className='text-[10px] md:text-[16px] font-normal'>
+  <p className='text-[10px] md:text-[16px] font-normal text-wrap'>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue
   </p>
 
