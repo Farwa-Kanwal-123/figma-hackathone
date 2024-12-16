@@ -64,10 +64,10 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="mt-[50px] md:mt-0 ">
-                    <Image src={foodpic1} alt="Hero Image" className="" width={336} height={536} />
+                    <Image src={foodpic1} alt="Hero Image" className="" width={660} height={330} />
                     <div className="flex flex-col md:flex-row mt-[16px] md:mt-[0]">
-                        <Image src={foodpic2} alt="Hero Image" className="mr-[16px] pt-[40px]" />
-                        <Image src={foodpic3} alt="Hero Image" className="pt-[40px]" />
+                        <Image src={foodpic2} alt="Hero Image" className="mr-[16px] pt-[16px]" />
+                        <Image src={foodpic3} alt="Hero Image" className="pt-[16px]" />
                     </div>
                 </div>
             </section>

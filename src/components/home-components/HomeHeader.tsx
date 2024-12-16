@@ -61,7 +61,7 @@ const Navbar = () => {
         {/* Search and Icons */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="hidden lg:flex items-center rounded-md px-3 py-2 space-x-4">
-            <input type="search" placeholder="Search..." className="rounded-full h-[35px] w-[310px] border border-[#FF9F0D] bg-black" />
+            <input type="search" placeholder="Search..." className="rounded-full h-[35px] w-[310px] border border-[#FF9F0D] bg-black placeholder:pl-4" />
             <IoSearch  className=' -translate-x-12 bg-black text-white' />
             <PiHandbagBold className='-translate-x-8 bg-black text-white'/>
           </div>

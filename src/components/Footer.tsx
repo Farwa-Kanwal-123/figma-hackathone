@@ -99,7 +99,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="wrapper bg-[#4F4F4F] py-6 px-4 md:flex md:justify-between md:items-center text-center md:text-left">
+      <div className="wrapper bg-[#FF9F0D] py-6 px-4 md:flex md:justify-between md:items-center text-center md:text-left">
         <span className="text-sm text-gray-300">
         Copyright © 2022 Ayeman. All Rights Reserved.
         </span>
