@@ -20,13 +20,13 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center text-white">
-          <Link href={"/"} className="text-[#FF9F0D] underline"> Home</Link>
-          <Link href={"/our-chef"}>Menu</Link>
-          <Link href={"/checkout"}>Blog</Link>
-          <Link href={"/signin"}>Pages</Link>
-          <Link href={"/signup"}>About</Link>
-          <Link href={"/FAQ"}>Shop</Link>
-          <Link href={"/404Error"}>Contact</Link>
+          <Link href={"/"} className="text-[#FF9F0D] underline hover:text-[#bd832c]"> Home</Link>
+          <Link href={"/menu"} className="hover:text-[#FF9F0D]">Menu</Link>
+          <Link href={"/checkout"} className="hover:text-[#FF9F0D]">Blog</Link>
+          <Link href={"/signin"} className="hover:text-[#FF9F0D]">Pages</Link>
+          <Link href={"/signup"} className="hover:text-[#FF9F0D]">About</Link>
+          <Link href={"/FAQ"} className="hover:text-[#FF9F0D]">Shop</Link>
+          <Link href={"/our-chef"} className="hover:text-[#FF9F0D]">Contact</Link>
         </nav>
 
         {/* Mobile Menu Trigger */}
@@ -41,12 +41,12 @@ const Navbar = () => {
               </SheetHeader>
               <nav className="mt-4 flex flex-col space-y-4">
                 <Link href={"/"} className="text-white text-lg">Home</Link>
-                <Link href={"/our-chef"} className="text-white text-lg">Menu</Link>
+                <Link href={"/menu"} className="text-white text-lg">Menu</Link>
                 <Link href={"/checkout"} className="text-white text-lg">Blog </Link>
                 <Link href={"/signin"} className="text-white text-lg">Pages</Link>
                 <Link href={"/signup"} className="text-white text-lg">About</Link>
                 <Link href={"/FAQ"} className="text-white text-lg">Shop</Link>
-                <Link href={"/404Error"} className="text-white text-lg">Contact </Link>
+                <Link href={"/our-chef"} className="text-white text-lg">Contact </Link>
            </nav>
 
               {/* Additional Icons */}

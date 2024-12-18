@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Hero from "@/components/Hero"
+import Hero from "@/components/OthersHero"
 
 export default function ErrorPage() {
   return (

@@ -1,4 +1,3 @@
-
 import { ExperienceItem } from '@/constant/Experience'
 import Image from 'next/image'
 import React from 'react'
@@ -6,7 +5,7 @@ import React from 'react'
 
 export default function Experience() {
   return (
-    <section className="relative py-10 sm:py-16 lg:py-20 bg-cover bg-center bg-[url('/menu.png')]">
+    <section className="relative py-10 sm:py-16 lg:my-20 lg:py-20 bg-cover bg-center bg-[url('/menu.png')]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-85"></div>
 
@@ -20,7 +19,7 @@ export default function Experience() {
               <div>
                 <Image
                   src={item.src}
-                  alt={item.label}  // Descriptive alt text based on item
+                  alt={item.label} 
                   width={120}
                   height={120}
                   className="mb-6 sm:mb-8 lg:mb-10"

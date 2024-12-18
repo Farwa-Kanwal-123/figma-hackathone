@@ -1,13 +1,13 @@
-import Header from '@/components/home-components/HomeHeader';
-import HomeHero from '@/components/home-components/HomeHero';
-import HomeAbout from '@/components/home-components/HomeAbout';
-import FoodCategory from '@/components/home-components/FoodCategory';
-import BlogPosts from '@/components/home-components/BlogPosts';
-import MeetOurChef from '@/components/home-components/MeetOurChefs';
-import Testemonials from '@/components/home-components/Testemonials';
-import ResturantActiveProcess from '@/components/home-components/ResturantActiveProcess';
-import FromOurMenu from '@/components/home-components/FromOurMenu';
-import Experience from '@/components/home-components/Experience';
+import Header from '@/components/homePage/HomeHeader';
+import HomeHero from '@/components/homePage/HomeHero';
+import HomeAbout from '@/components/homePage/HomeAbout';
+import FoodCategory from '@/components/homePage/FoodCategory';
+import BlogPosts from '@/components/homePage/BlogPosts';
+import MeetOurChef from '@/components/homePage/MeetOurChefs';
+import Testemonials from '@/components/homePage/Testemonials';
+import ResturantActiveProcess from '@/components/homePage/ResturantActiveProcess';
+import FromOurMenu from '@/components/homePage/FromOurMenu';
+import Experience from '@/components/Experience';
 
 
 const Home = () => {

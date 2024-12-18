@@ -21,4 +21,4 @@ const Hero = ({heading,}:{heading:string}) => {
   )
 }
 
-export default Hero
+export default Hero;

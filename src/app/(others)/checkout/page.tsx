@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Hero from "@/components/Hero";
+import Hero from "@/components/OthersHero";
 
 export default function CheckoutPage() {
   return (

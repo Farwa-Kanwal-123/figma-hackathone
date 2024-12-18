@@ -1,5 +1,5 @@
 "use client"
-import Hero from '@/components/Hero';
+import Hero from '@/components/OthersHero';
 import React, { useState } from 'react';
 
 const faqData = [

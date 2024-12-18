@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from "@/components/Hero";
-import Chef from "@/components/Chef";
+import Hero from "@/components/OthersHero";
+import Chef from "@/components/ourChefPage/Chef";
 
 const OurChef = () => {
   return (
