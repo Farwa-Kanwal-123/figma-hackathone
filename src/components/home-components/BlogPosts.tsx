@@ -16,7 +16,7 @@ const BlogPosts = () => {
   return (
     <div className="min-h-screen bg-[#0D0D0D] flex flex-col items-center justify-center py-16 px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-12">
-        <p className={`${greatVibes.className} text-[16px] md:text-[18px] text-[#FF9F0D]`}>Blog Post</p>
+        <p className={`${greatVibes.className} text-[24px] md:text-[32px] text-[#FF9F0D]`}>Blog Post</p>
         <h2 className="font-helvetica text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#FFFFFF]">
           <span className='text-[#FF9F0D]'>La</span>test News & Blog
         </h2>

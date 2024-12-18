@@ -18,8 +18,8 @@ const FromOurMenu = () => {
           <span className="text-[#FF9F0D]">Fr</span>om Our Menu
         </h2>
       </div>
-      <div className="flex justify-center mb-12">
-        <ul className="flex flex-wrap justify-wrap gap-[6rem] text-white text-sm sm:text-base">
+      <div className="flex justify-center mb-12 px-[20]">
+        <ul className="flex flex-wrap justify-wrap justify-center px-[20] gap-[1.5rem] md:gap-[6rem] text-white text-sm sm:text-base">
           <li className="text-[#FF9F0D] font-bold">Breakfast</li>
           <li>Lunch</li>
           <li>Dinner</li>

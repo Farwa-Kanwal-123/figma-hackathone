@@ -14,7 +14,7 @@ const greatVibes = Great_Vibes({
 
 const Testimonials = () => {
   return (
-    <div className="bg-[#0D0D0D] px-4 sm:px-8 lg:px-16 pb-12">
+    <div className="bg-[#0D0D0D] pt-[20px] px-4 sm:px-8 lg:px-16 pb-12">
       {/* Title Section */}
       <div className="text-left mb-12 ml-4 sm:ml-8 lg:ml-12">
         <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-orange-500`}>Testimonials</p>
@@ -44,7 +44,7 @@ const Testimonials = () => {
             jean shorts. Slow-carb next level ethical authentic, scenester sriracha
             forage franzen organic drinking vinegar.
           </p>
-          <span className='flex ml-[40%] mt-4 gap-2'>
+          <span className='flex ml-[24%] md:ml-[40%] mt-4 gap-2'>
           <FaStar size={24} className='text-[#FF9F0D]' />
           <FaStar size={24} className='text-[#FF9F0D]' />
           <FaStar size={24} className='text-[#FF9F0D]' />
@@ -57,7 +57,7 @@ const Testimonials = () => {
           <p className="text-[#828282] text-[16px] font-helvetica ">Food Specialist</p>
         </div>
       </div>
-<Image src="/Dot.png" alt="dots" width={86} height={16} className='ml-[47%]'/>
+<Image src="/Dot.png" alt="dots" width={86} height={16} className='ml-[35%] md:ml-[47%]'/>
      
     </div>
   );

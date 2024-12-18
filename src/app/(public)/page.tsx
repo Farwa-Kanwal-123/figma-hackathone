@@ -1,5 +1,3 @@
-
-
 import Header from '@/components/home-components/HomeHeader';
 import HomeHero from '@/components/home-components/HomeHero';
 import HomeAbout from '@/components/home-components/HomeAbout';
@@ -14,7 +12,7 @@ import Experience from '@/components/home-components/Experience';
 
 const Home = () => {
   return (
-    <main>
+    <main className='bg-[#0D0D0D]'>
       <Header/>
       <HomeHero/>
       <HomeAbout/>
