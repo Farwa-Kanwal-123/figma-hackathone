@@ -2,7 +2,7 @@
 import { Coffee } from 'lucide-react'
 import Heading from '@/components/menuPage/Heading'
 import Image from 'next/image'
-import { DrinksItem } from '@/constant/Drinks'
+import { DrinksItem } from '@/constant/menuPage/Drinks'
 
 export default function Drink() {
   return (

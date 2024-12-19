@@ -1,5 +1,5 @@
 
-import { menuItems } from '@/constant/Dessert'
+import { menuItems } from '@/constant/menuPage/Dessert'
 import { Coffee } from 'lucide-react'
 import Heading from '@/components/menuPage/Heading'
 import Image from "next/image"

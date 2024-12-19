@@ -23,9 +23,9 @@ const Navbar = () => {
           <Link href={"/"} className="text-[#FF9F0D] underline"> Home</Link>
           <Link href={"/menu"} className="hover:text-[#FF9F0D]">Menu</Link>
           <Link href={"/checkout"} className="hover:text-[#FF9F0D]">Blog</Link>
-          <Link href={"/signin"} className="hover:text-[#FF9F0D]">Pages</Link>
-          <Link href={"/signup"} className="hover:text-[#FF9F0D]">About</Link>
-          <Link href={"/FAQ"} className="hover:text-[#FF9F0D]">Shop</Link>
+          <Link href={"/FAQ"} className="hover:text-[#FF9F0D]">Pages</Link>
+          <Link href={"/about"} className="hover:text-[#FF9F0D]">About</Link>
+          <Link href={"/signin"} className="hover:text-[#FF9F0D]">Shop</Link>
           <Link href={"/our-chef"} className="hover:text-[#FF9F0D]">Contact</Link>
         </nav>
 
@@ -43,9 +43,9 @@ const Navbar = () => {
                 <Link href={"/"} className="text-white text-lg">Home</Link>
                 <Link href={"/menu"} className="text-white text-lg">Menu</Link>
                 <Link href={"/checkout"} className="text-white text-lg">Blog </Link>
-                <Link href={"/signin"} className="text-white text-lg">Pages</Link>
-                <Link href={"/signup"} className="text-white text-lg">About</Link>
-                <Link href={"/FAQ"} className="text-white text-lg">Shop</Link>
+                <Link href={"/FAQ"} className="text-white text-lg">Pages</Link>
+                <Link href={"/about"} className="text-white text-lg">About</Link>
+                <Link href={"/signin"} className="text-white text-lg">Shop</Link>
                 <Link href={"/our-chef"} className="text-white text-lg">Contact </Link>
            </nav>
 

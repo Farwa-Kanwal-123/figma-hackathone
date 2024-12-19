@@ -1,6 +1,6 @@
 import { Coffee } from 'lucide-react';
 import Heading from '@/components/menuPage/Heading';
-import { MainCourseItem } from '@/constant/MainCourse';
+import { MainCourseItem } from '@/constant/menuPage/MainCourse';
 import Image from 'next/image';
 
 export default function MainCourse() {
