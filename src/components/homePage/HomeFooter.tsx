@@ -5,7 +5,7 @@ import Image from "next/image";
 import { PiClockClockwiseBold } from "react-icons/pi";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
 
-const Footer = () => {
+const HomeFooter = () => {
   return (
     <footer className='max-w-[1320px] mx-auto bg-black text-white'>
       {/* Top Section */}
@@ -99,22 +99,22 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className='bg-[#4F4F4F] max-w-[1320px]'>
-      <div className="wrapper py-6 px-4 md:flex  md:justify-between md:items-center text-center md:text-left">
-        <span className="text-sm text-gray-300">
-        Copyright © 2022 Ayeman. All Rights Reserved.
-        </span>
-        <div className="flex justify-center md:justify-end gap-4 mt-4 md:mt-0">
-          {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest].map((Icon, index) => (
-            <div key={index} className="bg-white w-9 h-9 flex items-center justify-center rounded">
-              <Icon className="text-black" />
+     <div className='bg-[#FF9F0D] max-w-[1320px]'>
+          <div className="wrapper py-6 px-4 md:flex  md:justify-between md:items-center text-center md:text-left">
+            <span className="text-sm text-gray-300">
+            Copyright © 2022 Ayeman. All Rights Reserved.
+            </span>
+            <div className="flex justify-center md:justify-end gap-4 mt-4 md:mt-0">
+              {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest].map((Icon, index) => (
+                <div key={index} className="bg-white w-9 h-9 flex items-center justify-center rounded">
+                  <Icon className="text-black" />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-      </div>
-    </footer>
+          </div>
+          </div>
+        </footer>
   );
 };
 
-export default Footer;
+export default HomeFooter;

@@ -12,11 +12,11 @@ import {
 } from "@/components/ui/sheet";
 
 
-const Navbar = () => {
+const HomeHeader = () => {
   return (
-    <header className="w-full bg-black text-white z-50 sticky">
-        <h1 className="text-2xl font-bold w-full text-center pt-10"><span className="text-[#FF9F0D]">Food</span>tuck</h1>
-      <div className="wrapper flex justify-between items-center py-4">
+    <header className="max-w-[1320px] mx-auto bg-[#0D0D0D] text-white z-50 sticky">
+        <h1 className="text-2xl font-bold w-full text-center pt-8"><span className="text-[#FF9F0D]">Food</span>tuck</h1>
+      <div className="wrapper flex justify-between items-center py-4 lg:px-3">
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center text-white">
@@ -61,7 +61,7 @@ const Navbar = () => {
         {/* Search and Icons */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="hidden lg:flex items-center rounded-md px-3 py-2 space-x-4">
-            <input type="search" placeholder="Search..." className="rounded-full h-[35px] w-[310px] border border-[#FF9F0D] bg-black placeholder:pl-4" />
+            <input type="search" placeholder="Search..." className="rounded-full h-[35px] w-[310px] border border-[#FF9F0D] bg-black placeholder:ml-2" />
             <IoSearch  className=' -translate-x-12 bg-black text-white' />
             <PiHandbagBold className='-translate-x-8 bg-black text-white'/>
           </div>
@@ -71,5 +71,4 @@ const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;
+export default HomeHeader;

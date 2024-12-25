@@ -12,10 +12,10 @@ const greatVibes = Great_Vibes({
 
 const MeetOurChef = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#0D0D0D] pt-[20px] md:pt-0 md:pb-0 pb-[20px] px-6 md:px-16 lg:px-24 space-y-12">
+    <div className="max-w-[1320px] wrapper flex flex-col items-center justify-center bg-[#0D0D0D] pt-[20px] md:pt-0 md:pb-0 pb-[20px] space-y-12">
     <div className="text-center space-y-4">
   <p className={`${greatVibes.className}  text-[24px] md:text-[32px] font-normal text-[#FF9F0D]`}> Chefs</p>
-<h2 className="font-helvetica text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#FFFFFF]"><span className='text-[#FF9F0D]'>Me</span>et Our Chef</h2>
+<h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#FFFFFF]"><span className='text-[#FF9F0D]'>Me</span>et Our Chef</h2>
     </div>
 
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 px-16 md:px-28 gap-6 lg:grid-cols-4 lg:gap-2 items-center justify-center">

@@ -11,7 +11,7 @@ const greatVibes = Great_Vibes({
 
 const FromOurMenu = () => {
   return (
-    <div className="bg-[#0D0D0D] mx-auto px-4 sm:px-8 lg:px-16 py-12">
+    <div className="max-w-[1320px] bg-[#0D0D0D] mx-auto px-4 sm:px-8 lg:px-16 py-12">
       <div className="text-center mb-12">
         <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-[#FF9F0D]`}>Choose & Pick</p>
         <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white">

@@ -14,11 +14,11 @@ const greatVibes = Great_Vibes({
 
 const Testimonials = () => {
   return (
-    <div className="bg-[#0D0D0D] pt-[20px] px-4 sm:px-8 lg:px-16 pb-12">
+    <div className="max-w-[1320px] wrapper mx-auto pt-[20px] pb-12 my-12">
       {/* Title Section */}
       <div className="text-left mb-12 ml-4 sm:ml-8 lg:ml-12">
-        <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-orange-500`}>Testimonials</p>
-        <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+        <p className={`${greatVibes.className} text-[24px] sm:text-[32px] text-[#FF9F0D]`}>Testimonials</p>
+        <h2 className="wrapper font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
           What our clients are saying
         </h2>
       </div>
@@ -32,9 +32,9 @@ const Testimonials = () => {
           height={134} 
           className="rounded-full relative mb-[-50px]"
         />
-        <div className="max-w-4xl mx-auto  bg-[#ffffff] p-8 rounded-lg shadow-lg">
-          <PiQuotesLight size={47} className="text-orange-500 mt-10 mx-auto mb-4" />
-          <p className="leading-relaxed text-[#4F4F4F] text-lg">
+        <div className="max-w-[45rem] mx-auto  bg-[#ffffff] p-8 rounded-lg shadow-lg">
+          <PiQuotesLight size={47} className="text-[#FF9F0D] mt-10 mx-auto mb-4" />
+          <p className="leading-5 text-[#4F4F4F] text-lg">
             Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
             taxidermy 90&#39;s cronut +1 kinfolk. Single-origin coffee ennui shaman
             taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny

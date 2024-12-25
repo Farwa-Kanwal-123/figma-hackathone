@@ -5,11 +5,11 @@ import React from 'react'
 
 export default function Experience() {
   return (
-    <section className="relative py-10 sm:py-16 lg:my-20 lg:py-20 bg-cover bg-center bg-[url('/menu.png')]">
+    <section className="relative py-10 sm:py-16 lg:my-10 lg:py-10 bg-cover bg-center bg-[url('/menu.png')]">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-85"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative wrapper mx-auto">
         <div className="flex flex-wrap justify-between items-center text-center">
           {ExperienceItem.map((item, index) => (
             <div 

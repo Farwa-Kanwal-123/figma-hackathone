@@ -8,6 +8,6 @@
 
 @layer utilities{
   .wrapper{
-      @apply max-w-7xl mx-4 sm:mx-6 md:mx-8 lg:mx-auto
+      @apply max-w-5xl mx-4 sm:mx-6 md:mx-8 lg:mx-auto
   }
 }

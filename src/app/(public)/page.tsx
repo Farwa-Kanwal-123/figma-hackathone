@@ -13,7 +13,6 @@ import Experience from '@/components/Experience';
 const Home = () => {
   return (
     <main className='bg-[#0D0D0D]'>
-      <Header/>
       <HomeHero/>
       <HomeAbout/>
       <FoodCategory/>
@@ -23,7 +22,6 @@ const Home = () => {
       <Testemonials/>
       <ResturantActiveProcess/>
       <BlogPosts/>
-     
     </main>
   )
 }

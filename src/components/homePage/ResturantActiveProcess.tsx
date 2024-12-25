@@ -11,11 +11,11 @@ const greatVibes = Great_Vibes({
 
 const ResturantActiveProcess = () => {
   return (
-    <section className='my-8 md:my-12 '>
-    <div className="bg-[url('/bg-resturant.png')] bg-cover bg-center w-full h-[558px] lg:h-[600px] flex items-center justify-end px-4 sm:px-8 lg:px-16">
+    <section className=' max-w-[1320px] mx-auto my-8 md:my-12 '>
+    <div className="bg-[url('/bg-resturant.png')] bg-cover bg-center w-full h-[400px] lg:h-[500px] flex items-center justify-end px-4 sm:px-8 lg:px-16">
 
       <div className="text-right text-white max-w-[705px] ">
-        <p className={`${greatVibes.className} text-[24px]  sm:text-[32px] text-orange-500 mb-4`}>
+        <p className={`${greatVibes.className} text-[24px]  sm:text-[32px] text-[#FF9F0D] mb-4`}>
           Restaurant Active Process
         </p>
         <h2 className="font-bold text-3xl max-w-[705px] sm:text-4xl lg:text-5xl leading-tight mb-6">

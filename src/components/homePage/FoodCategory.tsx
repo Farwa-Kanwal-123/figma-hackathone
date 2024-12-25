@@ -19,8 +19,8 @@ const FoodCategory = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-16 px-6">
-      <div className="container mx-auto text-center">
+    <section className="max-w-[1320px] mx-auto text-white py-16 px-6">
+      <div className="wrapper mx-auto text-center">
         {/* Title */}
         <h3 className={`${greatVibes.className} text-[#FF9F0D] text-2xl md:text-4xl font-bold mb-12`}> Food Category</h3>
         <h2 className="text-3xl md:text-4xl font-bold mb-12">

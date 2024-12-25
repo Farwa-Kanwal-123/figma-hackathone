@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
-import Footer from "@/components/Footer";
+import HomeHeader from "@/components/homePage/HomeHeader";
+import HomeFooter from "@/components/homePage/HomeFooter";
 
 
 
@@ -33,8 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <HomeHeader/>
         {children}
-        <Footer/>
+        <HomeFooter/>
       </body>
     </html>
   );

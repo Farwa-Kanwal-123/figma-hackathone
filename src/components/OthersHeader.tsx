@@ -14,8 +14,8 @@ import {
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-black text-white z-50 sticky">
-      <div className="wrapper flex justify-between items-center py-4">
+    <header className="bg-black text-white z-50 sticky">
+      <div className="wrapper flex justify-between items-center py-4 ">
         <h1 className="text-2xl font-bold"><span className="text-[#FF9F0D]">Food</span>tuck</h1>
 
         {/* Desktop Navigation */}
