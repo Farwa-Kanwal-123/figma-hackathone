@@ -5,8 +5,8 @@ export default function CheckoutPage() {
   return (
     <section>
       <Hero heading="Checkout Page"/>
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid gap-8 lg:grid-cols-2">
+    <div className="wrapper py-8">
+      <div className="flex gap-4 flex-col lg:flex-row">
         {/* Left Column - Forms */}
         <div className="space-y-6">
           <div>
@@ -165,7 +165,7 @@ export default function CheckoutPage() {
         </div>
 
         {/* Right Column - Order Summary */}
-        <div className="p-6 rounded-lg border-2 border-gray-300">
+        <div className="p-6 rounded-lg border-2 border-gray-300 lg:w-[30%] flex flex-col">
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           <div className="space-y-4">
             {[1, 2, 3].map((item) => (

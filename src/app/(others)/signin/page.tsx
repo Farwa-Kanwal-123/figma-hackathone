@@ -11,7 +11,7 @@ export default function SignInPage() {
 
       {/* Signin Form */}
       <section className="py-16">
-        <div className="wrapper mx-auto max-w-md bg-white shadow-lg rounded-md p-8">
+        <div className="container mx-auto max-w-md bg-white shadow-lg rounded-md p-8">
           <h3 className="text-2xl font-bold mb-6 text-center">Sign In</h3>
           <form>
             <div className="mb-4">

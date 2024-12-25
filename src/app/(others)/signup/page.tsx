@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/OthersHero";
+import google from '@/../../public/Google.png'
+import apple from '@/../../public/Apple.png'
 import Image from "next/image";
 
 
@@ -54,11 +56,11 @@ export default function SignUpPage() {
           <div className="text-center mt-8">
             <p>or</p>
             <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center">
-              <Image src="Google.png" alt="Google" className="h-6 ml-4 mr-20" />
+              <Image src={google} alt="Google" className="h-6 ml-4 mr-20" />
               Sign in with Google
             </button>
             <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center ">
-              <Image src="/Apple.png" alt="Apple" className="h-6 ml-4 mr-20" />
+              <Image src={apple} alt="Apple" className="h-6 ml-4 mr-20" />
               Sign in with Apple
             </button>
           </div>
