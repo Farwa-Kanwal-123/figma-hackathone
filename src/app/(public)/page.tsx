@@ -1,4 +1,3 @@
-import Header from '@/components/homePage/HomeHeader';
 import HomeHero from '@/components/homePage/HomeHero';
 import HomeAbout from '@/components/homePage/HomeAbout';
 import FoodCategory from '@/components/homePage/FoodCategory';
