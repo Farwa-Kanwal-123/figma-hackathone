@@ -139,10 +139,11 @@ const Ourshop = () => {
           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
             Filter By Price
           </h2>
-          <input type='range' className="bg-yellow-300"/>
-          <p className="font-inter text-[14px] w-[105px] text-[#333333] mb-2">
+          <input type='range' className="bg-yellow-300 w-[200px]"/>
+          <p className="font-inter text-[17px] text-gray-400 w-[200px] flex justify-between mb-2">
             {" "}
-            Perfect Taste
+            <div>From $0 to $8000</div>
+            <div>Filter</div>
           </p>
           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
             Latest Products
