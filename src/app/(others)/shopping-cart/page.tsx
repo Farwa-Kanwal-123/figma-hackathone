@@ -1,336 +1,228 @@
-"use client"
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-interface Checkout {
-  id: number;
-  img: string;
-  title: string;
-  weg: string;
-  price: string;
-}
-export default function CheckoutPage() {
-  const data: Checkout[] = [
-    {
-      id: 1,
-      img: "/cart1.png",
-      title: "Chicken Tikka Kabab",
-      weg: "150 gm net",
-      price: "50$",
-    },
-    {
-      id: 2,
-      img: "/cart2.png",
-      title: "Chicken Tikka Kabab",
-      weg: "150 gm net",
-      price: "50$",
-    },
-    {
-      id: 3,
-      img: "/cart3.png",
-      title: "Chicken Tikka Kabab",
-      weg: "150 gm net",
-      price: "50$",
-    },
-  ];
+'use client';
 
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address1: "",
-    address2: "",
-    city: "",
-    zipCode: "",
-    country: "",
-  });
+import React, { useState } from 'react';
+import { Input } from "@/components/ui/input"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
-  const [isOrderPlaced, setIsOrderPlaced] = useState(false);
+const initialCartItems = [
+  { name: "Burger", price: 10.99, quantity: 2, image: "/cart1.png" },
+  { name: "Fresh Lime", price: 3.49, quantity: 1, image: "/item2.png" },
+  { name: "Pizza", price: 9.99, quantity: 4, image: "/cart3.png" },
+  { name: "Chocolate Muffin", price: 4.49, quantity: 1, image: "/cart4.png" },
+  { name: "Cheese Butter", price: 11.99, quantity: 3, image: "/cart5.png" },
+];
 
-  const subtotal = data.reduce((sum, item) => sum + parseFloat(item.price), 0);
-  const discount = 0.25 * subtotal; // 25% discount
-  const tax = 0.1 * subtotal; // 10% tax
-  const total = subtotal - discount + tax;
+const ShoppingCart: React.FC = () => {
+  const [cartItems, setCartItems] = useState(initialCartItems);
+  const [couponCode, setCouponCode] = useState("");
+  const [discount, setDiscount] = useState(0);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
+  const handleQuantityChange = (index: number, newQuantity: number) => {
+    const updatedItems = cartItems.map((item, i) =>
+      i === index ? { ...item, quantity: newQuantity } : item
+    );
+    setCartItems(updatedItems);
   };
 
-  const handlePlaceOrder = () => {
-    if (!formData.firstName || !formData.email || !formData.phone || !formData.address1) {
-      alert("Please fill in all required fields!");
-      return;
+  const handleRemoveItem = (index: number) => {
+    setCartItems(cartItems.filter((_, i) => i !== index));
+  };
+
+  const handleApplyCoupon = () => {
+    if (couponCode === "DISCOUNT10") {
+      setDiscount(0.1); // 10% discount
+    } else {
+      setDiscount(0);
     }
-    setIsOrderPlaced(true);
   };
+
+  const cartSubtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const shippingCharges = 30.0;
+  const totalAmount = cartSubtotal - cartSubtotal * discount + shippingCharges;
+
+  // Mobile card view for each item
+  interface CartItem {
+    name: string;
+    price: number;
+    quantity: number;
+    image: string;
+  }
+
+  interface CartItemCardProps {
+    item: CartItem;
+    index: number;
+  }
+
+  const CartItemCard: React.FC<CartItemCardProps> = ({ item, index }) => (
+    <div className="bg-white p-4 rounded-lg shadow-sm mb-4 border">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center space-x-4">
+          <Image 
+            src={item.image} 
+            alt={item.name}
+            width={64} 
+            height={64} 
+            className="rounded-md object-cover"
+          />
+          <div>
+            <h3 className="font-semibold">{item.name}</h3>
+            <p className="text-gray-600">${item.price.toFixed(2)}</p>
+          </div>
+        </div>
+        <button 
+          onClick={() => handleRemoveItem(index)}
+          className="text-red-500 hover:text-red-700"
+        >
+          ×
+        </button>
+      </div>
+      <div className="flex justify-between items-center">
+        <div className="flex items-center space-x-2">
+          <span className="text-gray-600">Qty:</span>
+          <Input
+            type="number"
+            value={item.quantity}
+            onChange={(e) => handleQuantityChange(index, parseInt(e.target.value) || 0)}
+            className="w-20 text-center"
+            min="0"
+          />
+        </div>
+        <span className="font-semibold">
+          ${(item.price * item.quantity).toFixed(2)}
+        </span>
+      </div>
+    </div>
+  );
 
   return (
-    <>
-      <section
-        className="bg-cover bg-center h-64 flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/bg.png')" }}
-      >
-        <div className="text-center text-white">
-          <h2 className="text-4xl font-bold">Checkout Page</h2>
-          <p className="pt-2">
-            <Link href="/" className="text-yellow-400">Home</Link> › Checkout
-          </p>
+    <div className="bg-gray-50 min-h-screen font-sans">
+      {/* <header className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 sm:p-10">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center">
+            Shopping Cart
+          </h1>
         </div>
-      </section>
-      <div className=" lg:max-w-[1920px] w-full px-auto   gap-2 ">
-     <div className=" lg:max-w-[1320px] w-full flex lg:px-16 flex-col lg:flex-row  py-24">
-       
-         
-        <div className="lg:max-w-[872px] md:px-16 px-4  w-full h-auto">
-            <h2 className=" text-xl font-semibold mb-4">Shipping Address</h2>
-            
+      </header> */}
 
-                <div className="w-full gap-2 flex md:flex-row flex-col px-0">
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="firstName"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      First name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      <main className="wrapper mx-auto py-8 ">
+        {/* Desktop View */}
+        <div className="hidden md:block overflow-x-auto">
+          <table className="w-full bg-white rounded-lg shadow-sm">
+            <thead>
+              <tr className="bg-gray-50 text-left">
+                <th className="p-4 font-semibold">Product</th>
+                <th className="p-4 font-semibold">Price</th>
+                <th className="p-4 font-semibold">Quantity</th>
+                <th className="p-4 font-semibold">Total</th>
+                <th className="p-4 font-semibold">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.map((item, index) => (
+                <tr key={index} className="border-t">
+                  <td className="p-4">
+                    <div className="flex items-center space-x-4">
+                      <Image 
+                        src={item.image} 
+                        alt={item.name}
+                        width={48} 
+                        height={48} 
+                        className="rounded-md object-cover"
+                      />
+                      <span className="font-medium">{item.name}</span>
+                    </div>
+                  </td>
+                  <td className="p-4">${item.price.toFixed(2)}</td>
+                  <td className="p-4">
+                    <Input
+                      type="number"
+                      value={item.quantity}
+                      onChange={(e) => handleQuantityChange(index, parseInt(e.target.value) || 0)}
+                      className="w-20 text-center"
+                      min="0"
                     />
-                  </div>
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="lastName"
-                      className="block text-sm font-medium text-gray-700 mb-1"
+                  </td>
+                  <td className="p-4 font-medium">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </td>
+                  <td className="p-4">
+                    <button 
+                      onClick={() => handleRemoveItem(index)}
+                      className="text-red-500 hover:text-red-700 text-xl"
                     >
-                      Last name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-            </div>
-            
+                      ×
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
+        {/* Mobile View */}
+        <div className="md:hidden">
+          {cartItems.map((item, index) => (
+            <CartItemCard key={index} item={item} index={index} />
+          ))}
+        </div>
 
-                <div className="flex flex-col my-4 gap-4 md:flex-row">
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Email address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Phone number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col my-4 gap-4 md:flex-row">
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="country"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      {" "}
-                      Country
-                </label>
-               <div className="w-[235px]">
-                    <select
-                      id="country"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    >
-                      <option value="" className="w-full px-3">Choose country</option>
-                      <option value="us" className="w-full px-3">United States</option>
-                      <option value="uk" className="w-full px-3">United Kingdom</option>
-                      <option value="ca" className="w-full px-3">Canada</option>
-                      <option value="pa" className="w-full px-3">Pakistan</option>
-                  </select>
-                  </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col my-4 md:flex-row gap-4">
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="city"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      id="city"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                      placeholder="Choose city"
-                    />
-                  </div>
-                  <div className="md:w-1/2 px-4 w-full">
-                    <label
-                      htmlFor="zipCode"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Zip code
-                    </label>
-                    <input
-                      type="text"
-                      id="zipCode"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-            </div>
-            <div className="flex flex-col my-4 gap-4 md:flex-row">
-            <div className="md:w-1/2 px-4 w-full">
-             
-                  <label
-                    htmlFor="address1"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Address 1
-                  </label>
-                  <input
-                    type="text"
-                    id="address1"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                  />
-                </div>
-                <div className="md:w-1/2 px-4 w-full">
-                  <label
-                    htmlFor="address2"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Address 2
-                  </label>
-                  <input
-                    type="text"
-                    id="address2"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                  />
-            </div>
-              <div>
-              </div>
-            </div>
-            <div className=" md:max-w-[1920px] w-full px-auto   gap-4 ">
-            <div className="md:max-w-[872px] my-4 w-full h-auto">
-            <h2 className="text-xl font-semibold mb-4">Billing Address</h2>
-              <div className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  id="sameAsShipping"
-                  className="h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500"
+        {/* Cart Summary Section */}
+        <div className="mt-8 space-y-6 lg:space-y-0 lg:flex lg:space-x-8">
+          {/* Coupon Section */}
+          <div className="lg:flex-1">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="text-lg font-semibold mb-4">Have a Coupon?</h2>
+              <div className="flex space-x-2">
+                <Input
+                  type="text"
+                  value={couponCode}
+                  onChange={(e) => setCouponCode(e.target.value)}
+                  placeholder="Enter coupon code"
+                  className="flex-1"
                 />
-                <label
-                  htmlFor="sameAsShipping"
-                  className="text-sm text-gray-700"
+                <Button 
+                  onClick={handleApplyCoupon}
+                  className="bg-orange-500 hover:bg-orange-600"
                 >
-                  Same as shipping address
-                </label>
+                  Apply
+                </Button>
               </div>
-            <div className="flex flex-col md:flex-row pt-4">
-              <button className="py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 w-72 h-12 px-3">
-                Back to cart
-              </button>
-              <button className="px-6 py-2 bg-orange-500 text-white rounded-md shadow-sm text-sm font-medium hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 w-72 h-12">
-                Proceed to shipping
-              </button>
-            </div>
             </div>
           </div>
-          </div>
-          <div className="flex-1">
-  <div className="py-8 px-6 relative mx-auto  lg:max-w-[424px] w-full rounded-lg border-2 border-gray-300">
-    <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-    <div className="space-y-6 gap-3 w-full">
-      {data.map((item) => (
-        <div 
-          key={item.id} 
-          className="flex gap-4 items-center w-full">
-          <div className="relative w-[82px] h-[88px]">
-            <Image
-              src={item.img}
-              alt="Chicken Tikka Kebab"
-              fill
-              className="rounded-md object-cover"
-            />
-          </div>
-          <div className="flex-1">
-            <h3 className="font-medium md:w-[161px]">
-              Chicken Tikka Kebab
-            </h3>
-            <p className="text-sm text-gray-500">{item.weg}</p>
-            <p className="text-sm text-gray-500">{item.price}</p>
+
+          {/* Order Summary */}
+          <div className="lg:w-96">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="text-lg font-semibold mb-4">Order Summary</h2>
+              <div className="space-y-3">
+                <div className="flex justify-between text-gray-600">
+                  <span>Subtotal</span>
+                  <span>${cartSubtotal.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-gray-600">
+                  <span>Discount</span>
+                  <span>-${(cartSubtotal * discount).toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-gray-600">
+                  <span>Shipping</span>
+                  <span>${shippingCharges.toFixed(2)}</span>
+                </div>
+                <div className="h-px bg-gray-200 my-4"></div>
+                <div className="flex justify-between text-lg font-semibold">
+                  <span>Total</span>
+                  <span>${totalAmount.toFixed(2)}</span>
+                </div>
+                <Button className="w-full bg-orange-500 hover:bg-orange-600 mt-6">
+                  Proceed to Checkout
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
-      ))}
+      </main>
     </div>
- 
-  
-           
-            <div className="mt-6 w-full space-y-6 border-t pt-4">
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Subtotal</span>
-                <span className="font-medium">130$</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Shipping</span>
-                <span className="font-medium">Free</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Discount</span>
-                <span className="font-medium">25%</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Tax</span>
-                <span className="font-medium">54.76$</span>
-              </div>
-              <div className="flex justify-between border-t pt-2">
-                <span className="font-semibold">Total</span>
-                <span className="font-semibold">432.65$</span>
-              </div>
-            </div>
-           
-            <button className="w-full mt-6 px-6 py-3 bg-orange-500 text-white rounded-md shadow-sm text-sm font-medium hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
-              Place an order
-            </button>
-          </div>
-          </div>
-          </div>
-          </div>
-    
-    </>
   );
-}
+};
+
+export default ShoppingCart;
