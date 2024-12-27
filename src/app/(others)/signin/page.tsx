@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function SignInPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Hero heading="404"/>
+      <Hero heading="Sign In"/>
 
       {/* Signin Form */}
       <section className="py-16">

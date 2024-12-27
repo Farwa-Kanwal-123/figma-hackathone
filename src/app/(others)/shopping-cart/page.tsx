@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Hero from '@/components/OthersHero';
 
 const initialCartItems = [
   { name: "Burger", price: 10.99, quantity: 2, image: "/cart1.png" },
@@ -96,6 +97,8 @@ const ShoppingCart: React.FC = () => {
   );
 
   return (
+    <>
+    <Hero heading='Shopping Cart'/>
     <div className="bg-gray-50 min-h-screen font-sans">
       {/* <header className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 sm:p-10">
         <div className="max-w-7xl mx-auto">
@@ -222,6 +225,7 @@ const ShoppingCart: React.FC = () => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 

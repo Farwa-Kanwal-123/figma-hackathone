@@ -1,3 +1,83 @@
+// import React from "react";
+// import Link from "next/link";
+// import { HiMenu } from "react-icons/hi";
+// import { IoSearch } from "react-icons/io5";
+// import { RxPerson } from "react-icons/rx";
+// import { PiHandbagBold } from "react-icons/pi";
+// import {
+//   Sheet,
+//   SheetContent,
+//   SheetHeader,
+//   SheetTitle,
+//   SheetTrigger,
+// } from "@/components/ui/sheet";
+
+
+// const Navbar = () => {
+//   return (
+//     <header className="bg-black text-white z-50 sticky">
+//       <div className="wrapper flex justify-between items-center py-4 ">
+//         <h1 className="text-2xl font-bold"><span className="text-[#FF9F0D]">Food</span>tuck</h1>
+
+//         {/* Desktop Navigation */}
+//         <nav className="hidden md:flex space-x-8 items-center text-white">
+//           <Link href={"/"} className="text-[#FF9F0D] underline"> Home</Link>
+//           <Link href={"/menu"} className="hover:text-[#FF9F0D]">Menu</Link>
+//           <Link href={"/blog-page"} className="hover:text-[#FF9F0D]">Blog</Link>
+//           <Link href={"/checkout"} className="hover:text-[#FF9F0D]">Pages</Link>
+//           <Link href={"/about"} className="hover:text-[#FF9F0D]">About</Link>
+//           <Link href={"/shop"} className="hover:text-[#FF9F0D]">Shop</Link>
+//           <Link href={"/our-chef"} className="hover:text-[#FF9F0D]">Contact</Link>
+//         </nav>
+
+//         {/* Mobile Menu Trigger */}
+//         <div className="md:hidden">
+//           <Sheet>
+//             <SheetTrigger asChild>
+//               <HiMenu className="text-2xl cursor-pointer text-white " />
+//             </SheetTrigger>
+//             <SheetContent side="left" className="w-64 bg-gray-900">
+//               <SheetHeader>
+//                 <SheetTitle className="text-white font-bold">Menu</SheetTitle>
+//               </SheetHeader>
+//               <nav className="mt-4 flex flex-col space-y-4">
+//                 <Link href={"/"} className="text-white text-lg">Home</Link>
+//                 <Link href={"/menu"} className="text-white text-lg">Menu</Link>
+//                 <Link href={"/blog-page"} className="text-white text-lg">Blog </Link>
+//                 <Link href={"/checkout"} className="text-white text-lg">Pages</Link>
+//                 <Link href={"/about"} className="text-white text-lg">About</Link>
+//                 <Link href={"/shop"} className="text-white text-lg">Shop</Link>
+//                 <Link href={"/our-chef"} className="text-white text-lg">Contact </Link>
+//            </nav>
+
+//               {/* Additional Icons */}
+//               <div className="mt-6 flex space-x-4">
+//                 <IoSearch className="text-xl text-white" />
+//                 <Link href='/signin'><RxPerson className="text-xl text-white" /></Link>          
+//                 <Link href='/shopping-cart'><PiHandbagBold className="text-xl text-white" /></Link>
+//               </div>
+//             </SheetContent>
+//           </Sheet>
+//         </div>
+
+//         {/* Search and Icons */}
+//         <div className="hidden md:flex items-center space-x-6">
+//           <div className="hidden lg:flex items-center rounded-md px-3 py-2 space-x-4">
+//             <IoSearch  className=' bg-black text-white' />
+//             <Link href='/signin'><RxPerson className=' bg-black text-white'/></Link>
+//             <Link href='/shopping-cart'><PiHandbagBold className=' bg-black text-white'/></Link>
+//           </div>
+
+//         </div>
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
+
+
+
 import React from "react";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
@@ -11,6 +91,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { RiArrowDropDownLine } from "react-icons/ri";
+
+
 
 const Navbar = () => {
   return (
@@ -23,10 +114,21 @@ const Navbar = () => {
           <Link href={"/"} className="text-[#FF9F0D] underline"> Home</Link>
           <Link href={"/menu"} className="hover:text-[#FF9F0D]">Menu</Link>
           <Link href={"/blog-page"} className="hover:text-[#FF9F0D]">Blog</Link>
-          <Link href={"/checkout"} className="hover:text-[#FF9F0D]">Pages</Link>
+          {/* drop down menu code */}
+          <DropdownMenu >
+            <DropdownMenuTrigger className='text-white'>Pages<RiArrowDropDownLine className="inline-block"/></DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel className='bg-white hover:text-[#FF9F0D]'>Other Pages</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className='bg-white '><Link href='/checkout'>Check Out</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/our-chef'>Our Chefs</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white hover:bg-white '><Link href='/FAQ'>FAQ</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/404Error'>404 Error</Link></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href={"/about"} className="hover:text-[#FF9F0D]">About</Link>
           <Link href={"/shop"} className="hover:text-[#FF9F0D]">Shop</Link>
-          <Link href={"/our-chef"} className="hover:text-[#FF9F0D]">Contact</Link>
+          <Link href={"/contact"} className="hover:text-[#FF9F0D]">Contact</Link>
         </nav>
 
         {/* Mobile Menu Trigger */}
@@ -43,17 +145,29 @@ const Navbar = () => {
                 <Link href={"/"} className="text-white text-lg">Home</Link>
                 <Link href={"/menu"} className="text-white text-lg">Menu</Link>
                 <Link href={"/blog-page"} className="text-white text-lg">Blog </Link>
-                <Link href={"/checkout"} className="text-white text-lg">Pages</Link>
+                 {/* drop down menu code */}
+          <DropdownMenu >
+            <DropdownMenuTrigger className='text-white'>Pages<RiArrowDropDownLine className="inline-block"/></DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel className='bg-white hover:text-[#FF9F0D]'>Other Pages</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className='bg-white'><Link href='/checkout'>Check Out</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/our-chef'>Our Chefs</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/FAQ'>FAQ</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/404Error'>404 Error</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/signup'>Sign Up</Link></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
                 <Link href={"/about"} className="text-white text-lg">About</Link>
                 <Link href={"/shop"} className="text-white text-lg">Shop</Link>
-                <Link href={"/our-chef"} className="text-white text-lg">Contact </Link>
-           </nav>
+                <Link href={"/contact"} className="text-white text-lg">Contact </Link>
+              </nav>
 
               {/* Additional Icons */}
               <div className="mt-6 flex space-x-4">
                 <IoSearch className="text-xl text-white" />
-                <RxPerson className="text-xl text-white" />
-                <PiHandbagBold className="text-xl text-white" />
+                <Link href='/signup'><RxPerson className="text-xl text-white" /></Link>
+                <Link href='/shopping-cart'><PiHandbagBold className="text-xl text-white" /></Link>
               </div>
             </SheetContent>
           </Sheet>
@@ -62,11 +176,20 @@ const Navbar = () => {
         {/* Search and Icons */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="hidden lg:flex items-center rounded-md px-3 py-2 space-x-4">
-            <IoSearch  className=' bg-black text-white' />
-            <RxPerson className=' bg-black text-white'/>
-            <PiHandbagBold className=' bg-black text-white'/>
+            <IoSearch className=' bg-black text-white' />
+               {/* drop down menu code */}
+          <DropdownMenu >
+            <DropdownMenuTrigger className='text-white'><RxPerson className=' bg-black text-white' /></DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel className='bg-white hover:text-[#FF9F0D]'>SignIn/SignUp</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className='bg-white '><Link href='/signin'>Sign In</Link></DropdownMenuItem>
+              <DropdownMenuItem className='bg-white '><Link href='/signup'>Sign Up</Link></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+            <Link href='/shopping-cart'><PiHandbagBold className=' bg-black text-white' /></Link>
           </div>
-         
+
         </div>
       </div>
     </header>
@@ -74,3 +197,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
