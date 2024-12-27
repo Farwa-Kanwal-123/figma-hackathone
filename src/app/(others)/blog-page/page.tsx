@@ -10,41 +10,41 @@ const HeroPage = () => {
   const filterMenu = [
     {
       id: 1,
-      image: "/Blog/Filtermanu1.jpeg",
+      image: "/blog/Filtermanu1.jpeg",
       title: "Chicken Fry",
       available: "26",
     },
     {
       id: 2,
-      image: "/Blog/Filtermanu2.jpeg",
+      image: "/blog/Filtermanu2.jpeg",
       title: "Burger Food",
       available: "46",
     },
     {
       id: 3,
-      image: "/Blog/Filtermanu3.jpeg",
+      image: "/blog/Filtermanu3.jpeg",
       title: "Pizza",
       available: "16",
     },
     {
       id: 4,
-      image: "/Blog/Filtermenu4.jpeg",
+      image: "/blog/Filtermenu4.jpeg",
       title: "Fresh Fruits",
       available: "36",
     },
     {
       id: 5,
-      image: "/Blog/Filtermanu5.jpeg",
+      image: "/blog/Filtermanu5.jpeg",
       title: "Vegetables",
       available: "16",
     },
   ];
 
   const recentPosts = [
-    { image: "/Blog/recentpost1.jpeg", date: "June 22, 2020" },
-    { image: "/Blog/recentpost2.jpeg", date: "June 23, 2020" },
-    { image: "/Blog/recentpost3.jpeg", date: "June 24, 2020" },
-    { image: "/Blog/recentpost4.jpeg", date: "June 25, 2020" }
+    { image: "/blog/recentpost1.jpeg", date: "June 22, 2020" },
+    { image: "/blog/recentpost2.jpeg", date: "June 23, 2020" },
+    { image: "/blog/recentpost3.jpeg", date: "June 24, 2020" },
+    { image: "/blog/recentpost4.jpeg", date: "June 25, 2020" }
   ];
 
   const galleryImages = ["gal1.png", "gal2.png", "gal3.png", "gal4.png", "gal5.png", "gal3.png"];
@@ -56,7 +56,7 @@ const HeroPage = () => {
           {/* Blog Cards Column */}
           <div className="flex-1 space-y-6 md:space-y-8">
             {[1, 2, 3, 4].map((i) => (
-              <BlogCard key={i} imageSrc={`/Blog/recentpost${i}.jpeg`} />
+              <BlogCard key={i} imageSrc={`/blog/recentpost${i}.jpeg`} />
             ))}
           </div>
 
@@ -91,7 +91,7 @@ const HeroPage = () => {
             <div className=" border-2 p-6 md:p-8 rounded-lg text-center">
               <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-6">
                 <Image
-                  src="/Blog/whiteman.png"
+                  src="/blog/whiteman.png"
                   alt="Profile"
                   fill
                   className="rounded-full object-cover"
@@ -190,7 +190,7 @@ const HeroPage = () => {
                 {galleryImages.map((image, index) => (
                   <div key={index} className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src={`/Blog/${image}`}
+                      src={`/blog/${image}`}
                       alt={`Gallery ${index + 1}`}
                       fill
                       className="object-cover"
