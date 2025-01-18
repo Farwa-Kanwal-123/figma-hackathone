@@ -15,6 +15,9 @@
 
 
 // fetch sanity data
+
+
+
 import React from 'react'
 import Hero from "@/components/OthersHero";
 import {client} from '@/sanity/lib/client'
