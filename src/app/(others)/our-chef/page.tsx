@@ -24,7 +24,7 @@ import {client} from '@/sanity/lib/client'
 import Image from 'next/image'
 
 interface IChef{
-  id:string,
+  _id:string,
   name:string,
   position:string,
   image_url:'url'
@@ -56,7 +56,7 @@ const OurChef = async () => {
      {
       chefs.map((chef:IChef)=>{
         return(
-          <div className='w-full lg:w-[250px] h-[430px]'key={chef.id} >
+          <div className='w-full lg:w-[250px] h-[430px]'key={chef._id} >
           <div className='w-full h-[365px] flex justify-center items-center'>
           <Image 
             src={chef.image_url} 

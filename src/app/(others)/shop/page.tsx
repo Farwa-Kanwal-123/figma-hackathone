@@ -300,7 +300,7 @@ import Hero from "@/components/OthersHero";
 import {client} from '@/sanity/lib/client';
 
 interface IFood{
-  id:string,
+  _id:string,
   name:string,
   price:number,
   image_url:'url'
@@ -351,8 +351,8 @@ const Ourshop = async () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
             {food.map((item:IFood) => (
-              <div key={item.id} className="shadow-md p-4 w-full m-4 rounded-lg">
-                <Link href={`/products/${item.id}`} >
+              <div key={item._id} className="shadow-md p-4 w-full m-4 rounded-lg">
+                <Link href={`/products/${item._id}`} >
                   <Image
                     src={item.image_url}
                     alt={item.name}
@@ -363,7 +363,7 @@ const Ourshop = async () => {
                 </Link>
                 <h2 className="text-xl font-bold p-2 ">{item.name}</h2>
                 <div className="text-gray-600 pl-2">${item.price}</div>
-                <Link href={`/products/${item.id}`}>
+                <Link href={`/products/${item._id}`}>
                   <button className="mt-2 w-full bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                     Show Details
                   </button>
