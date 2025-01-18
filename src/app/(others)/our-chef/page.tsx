@@ -20,6 +20,13 @@ import Hero from "@/components/OthersHero";
 import {client} from '@/sanity/lib/client'
 import Image from 'next/image'
 
+interface IChef{
+  id:string,
+  name:string,
+  position:string,
+  image_url:'url'
+}
+
 const getChef = async () =>{
   const chefs = await client.fetch(
     `
@@ -36,7 +43,7 @@ const getChef = async () =>{
 
 const OurChef = async () => {
   const chefs = await getChef();
-  // console.log(chefs)
+  console.log(chefs)
 
   return (
     <div>
@@ -44,9 +51,9 @@ const OurChef = async () => {
         {/* <Grid/> */}
          <div className='wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] space-y-1 my-[50px] md:my-[120px]'>
      {
-      chefs.map((chef)=>{
+      chefs.map((chef:IChef)=>{
         return(
-          <div className='w-full lg:w-[250px] h-[430px]' key={chef.id}>
+          <div className='w-full lg:w-[250px] h-[430px]'key={chef.id} >
           <div className='w-full h-[365px] flex justify-center items-center'>
           <Image 
             src={chef.image_url} 

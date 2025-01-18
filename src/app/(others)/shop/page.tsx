@@ -299,6 +299,12 @@ import { CiStar } from "react-icons/ci";
 import Hero from "@/components/OthersHero";
 import {client} from '@/sanity/lib/client';
 
+interface IFood{
+  id:string,
+  name:string,
+  price:number,
+  image_url:'url'
+}
 
 const getFood = async () =>{
   const food = await client.fetch(
@@ -344,7 +350,7 @@ const Ourshop = async () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
-            {food.map((item) => (
+            {food.map((item:IFood) => (
               <div key={item.id} className="shadow-md p-4 w-full m-4 rounded-lg">
                 <Link href={`/products/${item.id}`} >
                   <Image
