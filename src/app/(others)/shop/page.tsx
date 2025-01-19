@@ -47,7 +47,7 @@
 //                   />
 //                 </Link>
 //                 <h2 className="text-xl font-bold p-2 ">{item.title}</h2>
-//                 <p className="text-gray-600 pl-2">{item.price}</p>
+//                 <div className="text-gray-600 pl-2">{item.price}</div>
 //                 <Link href={`/products/${item.id}`}>
 //                   <button className="mt-2 w-full bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
 //                     Show Details
@@ -115,17 +115,17 @@
 //             </li>
 //           </ul>
 //           <div className="bg-[url(/images/shop.png)] p-4 mt-4 bg-cover w-[248px] h-[286px] ">
-//             <p className="font-inter font-bold text-[16px] w-[105px] text-[#FFFFFF]">
+//             <div className="font-inter font-bold text-[16px] w-[105px] text-[#FFFFFF]">
 //               {" "}
 //               Perfect Taste
-//             </p>
+//             </div>
 //             <h2 className="font-helvetica font-bold text-[20px] w-[181px] text-[#FFFFFF]">
 //               Classic Restaurant
 //             </h2>
-//             <p className="font-helvetica font-bold text-[16px] w-[58px] text-[#FF9F0D]">
+//             <div className="font-helvetica font-bold text-[16px] w-[58px] text-[#FF9F0D]">
 //               $45.00
-//             </p>
-//             <p className="flex gap-2 w-full h-[24px] mt-32">
+//             </div>
+//             <div className="flex gap-2 w-full h-[24px] mt-32">
 //               <button className="font-inter text-[16px]  text-[#FFFFFF]">
 //                 Shop Now
 //               </button>
@@ -134,17 +134,17 @@
 //                 className="text-[#FFFFFF] mt-1"
 //               />
 //               <button />
-//             </p>
+//             </div>
 //           </div>
 //           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
 //             Filter By Price
 //           </h2>
 //           <input type='range' className="bg-yellow-300 w-[200px]"/>
-//           <p className="font-inter text-[17px] text-gray-400 w-[200px] flex justify-between mb-2">
+//           <div className="font-inter text-[17px] text-gray-400 w-[200px] flex justify-between mb-2">
 //             {" "}
 //             <div>From $0 to $8000</div>
 //             <div>Filter</div>
-//           </p>
+//           </div>
 //           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
 //             Latest Products
 //           </h2>
@@ -170,7 +170,7 @@
 //                   <CiStar size={10} />
 //                   <CiStar size={10} />
 //                 </div>
-//                 <p className="text-orange-500">14.5$</p>
+//                 <div className="text-orange-500">14.5$</div>
 //               </div>
 //             </div>
 //             <div className="flex items-center gap-4">
@@ -194,7 +194,7 @@
 //                   <CiStar size={10} />
 //                   <CiStar size={10} />
 //                 </div>
-//                 <p className="text-orange-500">14.5$</p>
+//                 <div className="text-orange-500">14.5$</div>
 //               </div>
 //             </div>
 //             <div className="flex items-center gap-4">
@@ -218,7 +218,7 @@
 //                   <CiStar size={10} />
 //                   <CiStar size={10} />
 //                 </div>
-//                 <p className="text-orange-500">14.5$</p>
+//                 <div className="text-orange-500">14.5$</div>
 //               </div>
 //             </div>
 //             <div className="flex items-center gap-4">
@@ -242,38 +242,38 @@
 //                   <CiStar size={10} />
 //                   <CiStar size={10} />
 //                 </div>
-//                 <p className="text-orange-500">14.5$</p>
+//                 <div className="text-orange-500">14.5$</div>
 //               </div>
 //             </div>
 //             <h2 className="font-helvetica text-[20px] font-bold mt-4 mb-2">
 //               Product Tags
 //             </h2>
 //             <div className="w-[225px] h-[24px] gap-2 flex">
-//               <p className="font-inter font-bold border-b border-gray-300 text-[16px]  hover:text-[#FF9F0D] hover:underline  text-[#333333]">
+//               <div className="font-inter font-bold border-b border-gray-300 text-[16px]  hover:text-[#FF9F0D] hover:underline  text-[#333333]">
 //                 Services
-//               </p>
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+//               </div>
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
 //                 Our Menu
-//               </p>
+//               </div>
 //             </div>
 //             <div className="w-[225px] h-[24px] gap-2 flex">
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:underline text-[#333333]">
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:underline text-[#333333]">
 //                 Cupcake
-//               </p>
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:underline hover:text-[#333333] text-[#FF9F0D]">
+//               </div>
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:underline hover:text-[#333333] text-[#FF9F0D]">
 //                 Burger
-//               </p>
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:border-b hover:border-[#333333]">
+//               </div>
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:border-b hover:border-[#333333]">
 //                 Cookies
-//               </p>
+//               </div>
 //             </div>
 //             <div className="w-[225px] h-[24px] gap-2 flex">
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
 //                 Our Shop
-//               </p>
-//               <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+//               </div>
+//               <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
 //                 Tandoori Chicken
-//               </p>
+//               </div>
 //             </div>
 //           </div>
 //         </div>
@@ -430,17 +430,17 @@ const Ourshop = async () => {
             </li>
           </ul>
           <div className="bg-[url(/images/shop.png)] p-4 mt-4 bg-cover w-[248px] h-[286px] ">
-            <p className="font-inter font-bold text-[16px] w-[105px] text-[#FFFFFF]">
+            <div className="font-inter font-bold text-[16px] w-[105px] text-[#FFFFFF]">
               {" "}
               Perfect Taste
-            </p>
+            </div>
             <h2 className="font-helvetica font-bold text-[20px] w-[181px] text-[#FFFFFF]">
               Classic Restaurant
             </h2>
-            <p className="font-helvetica font-bold text-[16px] w-[58px] text-[#FF9F0D]">
+            <div className="font-helvetica font-bold text-[16px] w-[58px] text-[#FF9F0D]">
               $45.00
-            </p>
-            <p className="flex gap-2 w-full h-[24px] mt-32">
+            </div>
+            <div className="flex gap-2 w-full h-[24px] mt-32">
               <button className="font-inter text-[16px]  text-[#FFFFFF]">
                 Shop Now
               </button>
@@ -449,17 +449,17 @@ const Ourshop = async () => {
                 className="text-[#FFFFFF] mt-1"
               />
               <button />
-            </p>
+            </div>
           </div>
           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
             Filter By Price
           </h2>
           <input type='range' className="bg-yellow-300 w-[200px]"/>
-          <p className="font-inter text-[17px] text-gray-400 w-[200px] flex justify-between mb-2">
+          <div className="font-inter text-[17px] text-gray-400 w-[200px] flex justify-between mb-2">
             {" "}
             <div>From $0 to $8000</div>
             <div>Filter</div>
-          </p>
+          </div>
           <h2 className="font-helvetica text-[20px] font-bold mt-2 mb-2">
             Latest Products
           </h2>
@@ -485,7 +485,7 @@ const Ourshop = async () => {
                   <CiStar size={10} />
                   <CiStar size={10} />
                 </div>
-                <p className="text-orange-500">14.5$</p>
+                <div className="text-orange-500">14.5$</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -509,7 +509,7 @@ const Ourshop = async () => {
                   <CiStar size={10} />
                   <CiStar size={10} />
                 </div>
-                <p className="text-orange-500">14.5$</p>
+                <div className="text-orange-500">14.5$</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -533,7 +533,7 @@ const Ourshop = async () => {
                   <CiStar size={10} />
                   <CiStar size={10} />
                 </div>
-                <p className="text-orange-500">14.5$</p>
+                <div className="text-orange-500">14.5$</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -557,38 +557,38 @@ const Ourshop = async () => {
                   <CiStar size={10} />
                   <CiStar size={10} />
                 </div>
-                <p className="text-orange-500">14.5$</p>
+                <div className="text-orange-500">14.5$</div>
               </div>
             </div>
             <h2 className="font-helvetica text-[20px] font-bold mt-4 mb-2">
               Product Tags
             </h2>
             <div className="w-[225px] h-[24px] gap-2 flex">
-              <p className="font-inter font-bold border-b border-gray-300 text-[16px]  hover:text-[#FF9F0D] hover:underline  text-[#333333]">
+              <div className="font-inter font-bold border-b border-gray-300 text-[16px]  hover:text-[#FF9F0D] hover:underline  text-[#333333]">
                 Services
-              </p>
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+              </div>
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
                 Our Menu
-              </p>
+              </div>
             </div>
             <div className="w-[225px] h-[24px] gap-2 flex">
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:underline text-[#333333]">
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:underline text-[#333333]">
                 Cupcake
-              </p>
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:underline hover:text-[#333333] text-[#FF9F0D]">
+              </div>
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:underline hover:text-[#333333] text-[#FF9F0D]">
                 Burger
-              </p>
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:border-b hover:border-[#333333]">
+              </div>
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300  hover:text-[#FF9F0D] hover:border-b hover:border-[#333333]">
                 Cookies
-              </p>
+              </div>
             </div>
             <div className="w-[225px] h-[24px] gap-2 flex">
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
                 Our Shop
-              </p>
-              <p className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
+              </div>
+              <div className="font-inter font-bold text-[16px] border-b border-gray-300 hover:text-[#FF9F0D] hover:underline text-[#333333]">
                 Tandoori Chicken
-              </p>
+              </div>
             </div>
           </div>
         </div>
