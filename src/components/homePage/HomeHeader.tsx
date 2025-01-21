@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 import { PiHandbagBold } from "react-icons/pi";
+import SearchBar from './SearchBar'
 import {
   Sheet,
   SheetContent,
@@ -94,7 +95,7 @@ const HomeHeader = () => {
         </div>
 
         {/* Search and Icons */}
-        <div className="hidden md:flex items-center space-x-6">
+        {/* <div className="hidden md:flex items-center space-x-6">
           <div className="hidden lg:flex items-center rounded-md px-3 py-2 space-x-4">
             <input
               type="search"
@@ -106,8 +107,10 @@ const HomeHeader = () => {
               <PiHandbagBold className="-translate-x-8 bg-black text-white" />
             </Link>
           </div>
-        </div>
+        </div> */}
 
+        {/* search bar functionality code according to schema*/}
+          <SearchBar/>
       </div>
     </header>
   );
