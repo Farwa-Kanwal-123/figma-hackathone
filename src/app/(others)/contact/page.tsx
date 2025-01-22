@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -39,7 +38,7 @@ export default function Contact() {
         <Card>
           <CardHeader>
             <CardTitle>Send Me a Message</CardTitle>
-            <CardDescription>I&#39;d love to hear from you! Whether you have a question about my travels or just want to say hello, feel free to drop me a line.</CardDescription>
+            <CardDescription>I&#39;d love to hear from you! Whether you have a question about my foods or booking chef or just want to say hello, feel free to drop me a line.</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit}>
@@ -91,7 +90,7 @@ export default function Contact() {
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-2">
                 <MapPin className="text-[#FF9F0D]" />
-                <span>123 Travel Street, Adventure City, 12345</span>
+                <span>123 Food Street, Food City, 12345</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="text-[#FF9F0D]" />
@@ -99,7 +98,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="text-[#FF9F0D]" />
-                <span>farwa@traveladventures.com</span>
+                <span>farwa@foodyweb.com</span>
               </div>
             </CardContent>
           </Card>
