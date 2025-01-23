@@ -383,7 +383,7 @@ const OurShop = async () => {
                     ${food.originalPrice.toFixed(2)}
                   </p>
                 )}
-                <Link href={`/shop-details/${food._id}`}>
+                <Link href={`/shop/${food._id}`}>
                   <button className="mt-2 w-full bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                     Show Details
                   </button>
@@ -407,11 +407,11 @@ const OurShop = async () => {
             <input
               type="text"
               placeholder="Search Product"
-              className="w-[202px] bg-[#ebe2d5] pl-4 text-gray-400"
+              className="w-full bg-[#ebe2d5] pl-4 text-gray-400"
             />
             <CiSearch
               size={20}
-              className="bg-[#FF9F0D] p-3 text-[#FFFFFF] w-[46px] h-[46px]"
+              className="bg-[#FF9F0D] p-3 text-[#FFFFFF] w-[46px] h-[46px] -translate-x-10"
             />
           </div>
 
