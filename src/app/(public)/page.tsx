@@ -7,7 +7,7 @@ import MeetOurChef from '@/components/homePage/MeetOurChefs';
 import Testemonials from '@/components/homePage/Testemonials';
 import ResturantActiveProcess from '@/components/homePage/ResturantActiveProcess';
 import FromOurMenu from '@/components/homePage/FromOurMenu';
-import Experience from '@/components/Experience';
+import Experience from '@/components/homePage/Experience';
 import HomeFooter from '@/components/homePage/HomeFooter'
 
 
