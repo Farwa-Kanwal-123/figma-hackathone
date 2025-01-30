@@ -5,6 +5,7 @@ import foodpic1 from "@/../../public/about1.png"
 import foodpic2 from "@/../../public/about2.png"
 import foodpic3 from "@/../../public/about3.png"
 import { Great_Vibes } from 'next/font/google';
+import Link from 'next/link'
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],  
@@ -59,9 +60,9 @@ function HomePage() {
                     </ul>
 
                   
-                        <button className="bg-[#FF9F0D] text-white w-[100px] h-[30px] md:w-[190px] md:h-[60px] rounded-[40px] mt-[28px] hover:bg-yellow-800">
+                       <Link href="/about"> <button className="bg-[#FF9F0D] text-white w-[100px] h-[30px] md:w-[190px] md:h-[60px] rounded-[40px] mt-[28px] hover:bg-yellow-800">
                             See More
-                        </button>
+                        </button></Link>
                  
                 </div>
                 </div>

@@ -14,7 +14,7 @@ const greatVibes = Great_Vibes({
 
 const BlogPosts = () => {
   return (
-    <div className="max-w-[1320px] wrapper bg-[#0D0D0D] flex flex-col items-center justify-center py-16 px-4 sm:px-8 lg:px-16">
+    <div className="max-w-[1320px] wrapper bg-[#0D0D0D] flex flex-col items-center justify-center py-16">
       <div className="text-center mb-12">
         <p className={`${greatVibes.className} text-[24px] md:text-[30px] text-[#FF9F0D]`}>Blog Post</p>
         <h2 className="font-helvetica text-[28px] md:text-[34px] lg:text-[44px] font-bold text-[#FFFFFF]">

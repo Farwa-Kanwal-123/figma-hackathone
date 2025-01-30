@@ -325,3 +325,204 @@ export default function CheckoutPage() {
    </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import Hero from "@/components/OthersHero";
+// import Image from "next/image";
+// import { Button } from "@/components/ui/button";
+// import { ShoppingCartIcon } from "lucide-react";
+
+// // Define types
+// interface Product {
+//   id: number;
+//   name: string;
+//   price: number;
+//   image: string;
+//   quantity: number;
+// }
+
+// const initialProducts: Product[] = [
+//   {
+//     id: 1,
+//     name: "Vintage Leather Jacket",
+//     price: 129.99,
+//     image: "/placeholder.svg?height=200&width=200",
+//     quantity: 1,
+//   },
+//   {
+//     id: 2,
+//     name: "Classic Denim Jeans",
+//     price: 79.99,
+//     image: "/placeholder.svg?height=200&width=200",
+//     quantity: 1,
+//   },
+//   {
+//     id: 3,
+//     name: "Stylish Sneakers",
+//     price: 99.99,
+//     image: "/placeholder.svg?height=200&width=200",
+//     quantity: 1,
+//   },
+// ];
+
+// export default function CheckoutPage() {
+//   const [products] = useState(initialProducts);
+//   const [cartItems, setCartItems] = useState<Product[]>([]);
+
+//   // Load cart from local storage
+//   useEffect(() => {
+//     const savedCart = localStorage.getItem("cart");
+//     if (savedCart) {
+//       setCartItems(JSON.parse(savedCart));
+//     }
+//   }, []);
+
+//   // Save cart to local storage
+//   useEffect(() => {
+//     localStorage.setItem("cart", JSON.stringify(cartItems));
+//   }, [cartItems]);
+
+//   const addToCart = (product: Product) => {
+//     const existingItem = cartItems.find((item) => item.id === product.id);
+//     if (existingItem) {
+//       setCartItems(
+//         cartItems.map((item) =>
+//           item.id === product.id
+//             ? { ...item, quantity: item.quantity + 1 }
+//             : item
+//         )
+//       );
+//     } else {
+//       setCartItems([...cartItems, product]);
+//     }
+//   };
+
+//   const removeFromCart = (productId: number) => {
+//     setCartItems(cartItems.filter((item) => item.id !== productId));
+//   };
+
+//   const updateQuantity = (productId: number, quantity: number) => {
+//     setCartItems(
+//       cartItems.map((item) =>
+//         item.id === productId ? { ...item, quantity: Math.max(quantity, 1) } : item
+//       )
+//     );
+//   };
+
+//   const calculateTotal = () => {
+//     return cartItems
+//       .reduce((total, item) => total + item.price * item.quantity, 0)
+//       .toFixed(2);
+//   };
+
+//   const handleCheckout = () => {
+//     alert("Checkout successful! Thank you for your purchase.");
+//     setCartItems([]);
+//     localStorage.removeItem("cart");
+//   };
+
+//   return (
+//     <>
+//       <Hero heading="Checkout Page" />
+//       <div className="container mx-auto px-4 py-8">
+//         <div className="grid lg:grid-cols-3 gap-8">
+//           {/* Product List */}
+//           <div className="lg:col-span-2">
+//             <h2 className="text-2xl font-bold mb-4">Available Products</h2>
+//             <div className="grid gap-4">
+//               {products.map((product) => (
+//                 <div
+//                   key={product.id}
+//                   className="flex items-center justify-between border-b pb-2"
+//                 >
+//                   <div className="flex items-center space-x-4">
+//                     <img
+//                       src={product.image}
+//                       alt={product.name}
+//                       className="w-16 h-16 object-cover rounded"
+//                     />
+//                     <div>
+//                       <div className="font-medium">{product.name}</div>
+//                       <div className="text-gray-500">${product.price.toFixed(2)}</div>
+//                     </div>
+//                   </div>
+//                   <Button onClick={() => addToCart(product)}>Add to Cart</Button>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Cart and Checkout */}
+//           <div>
+//             <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
+//             {cartItems.length === 0 ? (
+//               <p className="text-gray-500">Your cart is empty</p>
+//             ) : (
+//               <div className="space-y-4">
+//                 {cartItems.map((item) => (
+//                   <div
+//                     key={item.id}
+//                     className="flex items-center justify-between border-b pb-2"
+//                   >
+//                     <div className="flex items-center space-x-4">
+//                       <img
+//                         src={item.image}
+//                         alt={item.name}
+//                         className="w-12 h-12 object-cover rounded"
+//                       />
+//                       <div>
+//                         <div className="font-medium">{item.name}</div>
+//                         <div className="text-gray-500">${item.price.toFixed(2)}</div>
+//                       </div>
+//                     </div>
+//                     <div className="flex items-center space-x-2">
+//                       <input
+//                         type="number"
+//                         value={item.quantity}
+//                         min="1"
+//                         onChange={(e) =>
+//                           updateQuantity(item.id, parseInt(e.target.value))
+//                         }
+//                         className="w-16 text-center border rounded"
+//                       />
+//                       <Button
+//                         variant="destructive"
+//                         onClick={() => removeFromCart(item.id)}
+//                       >
+//                         Remove
+//                       </Button>
+//                     </div>
+//                   </div>
+//                 ))}
+//                 <div className="mt-4">
+//                   <div className="flex justify-between font-semibold text-lg">
+//                     <span>Total:</span>
+//                     <span>${calculateTotal()}</span>
+//                   </div>
+//                   <Button
+//                     className="mt-4 w-full bg-orange-500 text-white"
+//                     onClick={handleCheckout}
+//                   >
+//                     Proceed to Checkout
+//                   </Button>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
